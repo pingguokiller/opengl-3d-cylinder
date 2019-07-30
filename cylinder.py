@@ -246,6 +246,8 @@ def materiaIron1():
 
 #GLU画法
 def newDraw():
+    DENSITY = 128
+
     materiaIron1()
 
     # create quadric
@@ -255,23 +257,23 @@ def newDraw():
     # draw lower part of cylinder
     glRotatef(90, 1.0, 0.0, 0.0)
     #glTranslatef(0.0, 0.3, 0)
-    gluDisk(quadratic, 0.05, 0.3, 128, 128)
-    gluCylinder(quadratic, 0.3, 0.3, 0.1, 64, 64)
-    gluCylinder(quadratic, 0.05, 0.05, 0.1, 64, 64)
+    gluDisk(quadratic, 0.05, 0.3, DENSITY, DENSITY)
+    gluCylinder(quadratic, 0.3, 0.3, 0.1, DENSITY, DENSITY)
+    gluCylinder(quadratic, 0.05, 0.05, 0.1, DENSITY, DENSITY)
     glTranslatef(0.0, 0, 0.1)
-    gluDisk(quadratic, 0.05, 0.3, 128, 128)
+    gluDisk(quadratic, 0.05, 0.3, DENSITY, DENSITY)
 
     # draw middle part of cylinder
-    gluCylinder(quadratic, 0.1, 0.1, 0.9, 64, 64)
-    gluCylinder(quadratic, 0.05, 0.05, 0.9, 64, 64)
+    gluCylinder(quadratic, 0.1, 0.1, 0.9, DENSITY, DENSITY)
+    gluCylinder(quadratic, 0.05, 0.05, 0.9, DENSITY, DENSITY)
 
     # uper
     glTranslatef(0.0, 0, 0.9)
-    gluDisk(quadratic, 0.05, 0.3, 64, 64)
-    gluCylinder(quadratic, 0.3, 0.3, 0.1, 64, 64)
-    gluCylinder(quadratic, 0.05, 0.05, 0.1, 64, 64)
+    gluDisk(quadratic, 0.05, 0.3, DENSITY, DENSITY)
+    gluCylinder(quadratic, 0.3, 0.3, 0.1, DENSITY, DENSITY)
+    gluCylinder(quadratic, 0.05, 0.05, 0.1, DENSITY, DENSITY)
     glTranslatef(0.0, 0, 0.1)
-    gluDisk(quadratic, 0.05, 0.3, 64, 64)
+    gluDisk(quadratic, 0.05, 0.3, DENSITY, DENSITY)
     #glutSolidSphere(0.05, 50, 50)  # 绘制球
 
 
